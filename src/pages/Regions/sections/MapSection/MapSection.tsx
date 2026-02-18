@@ -21,7 +21,7 @@ const MapSection: React.FC<MapSectionProps> = ({
   const [geoData, setGeoData] = useState<any>(null);
 
   useEffect(() => {
-    fetch('/tunisia.geojson')
+    fetch('/project-x/tunisia.geojson')
       .then(res => res.json())
       .then(setGeoData)
       .catch(err => console.error("GeoJSON Error:", err));

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router';
+import { Routes, Route, HashRouter } from 'react-router';
 import NavigationBar from './components/NavigationBar/NavigationBar';
 import Home from './pages/Home/Home';
 import Constitution from './pages/Constitution/Constitution';
@@ -15,7 +15,7 @@ import Regions from './pages/Regions/Regions';
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       {/* Viewport locked to screen height to prevent body-level scrolling issues */}
       <div className="h-screen flex flex-col bg-white overflow-hidden">
         
@@ -36,7 +36,7 @@ const App: React.FC = () => {
         </main>
 
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
