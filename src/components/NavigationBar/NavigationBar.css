@@ -1,21 +1,64 @@
-/* NavigationBar.css - Elegant Minimalist */
-
+/* Navigation Framework */
 .nav-frame {
   border-bottom: 2px solid #000;
   background-color: #ffffff;
   position: sticky;
   top: 0;
   z-index: 1000;
-  height: 90px;
   display: flex;
-  align-items: center;
+  flex-direction: column; /* Stack disclaimer on top of nav */
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+/* Disclaimer Bar Styling */
+.nav-disclaimer {
+  background-color: #000;
+  color: #fff;
+  padding: 8px 3rem;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.disclaimer-content {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.disclaimer-tag {
+  font-size: 8px;
+  font-weight: 900;
+  background: #fff;
+  color: #000;
+  padding: 2px 6px;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.disclaimer-text {
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* Scroll Animations */
 .nav-frame.nav-scrolled {
-  height: 70px;
   background-color: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
+}
+
+.nav-frame.nav-scrolled .nav-disclaimer {
+  height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  opacity: 0;
 }
 
 .nav-container {
@@ -23,9 +66,15 @@
   margin: 0 auto;
   width: 100%;
   padding: 0 3rem;
+  height: 80px; /* Base height for the menu part */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: height 0.4s ease;
+}
+
+.nav-frame.nav-scrolled .nav-container {
+  height: 70px;
 }
 
 /* Horizontal Logo Styling */
@@ -79,7 +128,6 @@
   align-items: center;
 }
 
-/* The Precision Underline */
 .nav-link {
   font-size: 10px;
   font-weight: 800;
@@ -94,7 +142,7 @@
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: -2px; /* Pins it exactly to the nav-frame border */
+  bottom: -2px;
   left: 0;
   width: 0;
   height: 2px;
@@ -110,7 +158,6 @@
   opacity: 0.5;
 }
 
-/* CTA: The Join Button */
 .nav-cta-btn {
   border: 2px solid #000;
   padding: 12px 28px;
@@ -130,7 +177,6 @@
   color: #000;
 }
 
-/* Mobile Toggle Styles */
 .mobile-toggle {
   display: block;
   font-weight: 950;
@@ -142,6 +188,19 @@
   cursor: pointer;
 }
 
+/* Mobile Disclaimer */
+.mobile-disclaimer {
+  margin-top: 40px;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.5;
+  text-align: center;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
 @media (min-width: 1024px) {
   .nav-links-wrapper { display: flex; }
   .mobile-toggle { display: none; }
@@ -151,3 +210,6 @@
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.3; transform: scale(0.9); }
 }
+
+/* Simple Reset for Demo */
+.w-full { width: 100%; }

@@ -19,8 +19,18 @@ const NavigationBar: React.FC = () => {
 
   return (
     <nav className={`nav-frame ${scrolled ? 'nav-scrolled' : ''}`}>
+      {/* Top Disclaimer Bar */}
+      <div className="nav-disclaimer">
+        <div className="disclaimer-content">
+          <span className="disclaimer-tag">CIVIL INITIATIVE</span>
+          <p className="disclaimer-text">
+            This is an initiative by citizens of Tunisia. It is a private proposal and does not 
+            reflect the Government of Tunisia or any of its official components.
+          </p>
+        </div>
+      </div>
+
       <div className="nav-container">
-        
         {/* Elegant Linear Logo Lockup */}
         <Link to="/" className="nav-logo-group">
           <span className="logo-main">PROJECT X</span>
@@ -56,6 +66,10 @@ const NavigationBar: React.FC = () => {
             <Link to="/regions" className={`mobile-link ${isActive('/regions') ? 'active' : ''}`}>Regions</Link>
             <div className="mobile-cta-section">
               <button className="nav-cta-btn w-full">Join the Initiative</button>
+            </div>
+            {/* Disclaimer also repeated in mobile menu for clarity */}
+            <div className="mobile-disclaimer">
+              Non-Governmental / Citizen Proposal
             </div>
           </div>
         </div>
