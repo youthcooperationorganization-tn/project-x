@@ -1,0 +1,124 @@
+/* Debate.css - Dynamic Community Section */
+
+:root {
+  --discord-blurple: #5865F2;
+  --reddit-orange: #FF4500;
+}
+
+.debate-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background-color: #000; /* Default state */
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dynamic Themes */
+.debate-section.theme-discord {
+  background-color: var(--discord-blurple);
+}
+
+.debate-section.theme-reddit {
+  background-color: var(--reddit-orange);
+}
+
+.debate-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 4rem;
+  width: 100%;
+}
+
+.debate-box {
+  max-width: 900px;
+  width: 100%;
+}
+
+.debate-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 950;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.debate-desc {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 650px;
+  margin: 0 auto 4rem auto;
+  line-height: 1.6;
+}
+
+/* Community Buttons */
+.community-btn-grid {
+  display: grid;
+  grid-template-cols: 1fr 1fr;
+  gap: 20px;
+}
+
+.community-btn-industrial {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.community-btn-industrial .btn-meta {
+  font-family: monospace;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.2em;
+}
+
+.community-btn-industrial .btn-text {
+  color: #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+}
+
+/* Hover Interaction */
+.community-btn-industrial:hover {
+  background: #fff;
+  border-color: #fff;
+  transform: translateY(-5px);
+}
+
+.community-btn-industrial:hover .btn-text {
+  color: #000;
+}
+
+.community-btn-industrial:hover .btn-meta {
+  color: #888;
+}
+
+/* Footer Fix: Ensures it stays at the very bottom */
+.footer-anchor {
+  width: 100%;
+  margin-top: auto;
+  background: rgba(0, 0, 0, 0.2); /* Subtle contrast against dynamic colors */
+}
+
+@media (max-width: 900px) {
+  .community-btn-grid {
+    grid-template-cols: 1fr;
+  }
+  
+  .debate-container {
+    padding: 0 2rem;
+  }
+}

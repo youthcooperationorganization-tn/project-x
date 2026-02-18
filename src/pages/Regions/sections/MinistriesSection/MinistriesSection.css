@@ -1,0 +1,159 @@
+.ministries-unbound-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden; 
+  box-sizing: border-box;
+  padding: 120px 5% 150px 5%; /* Increased top padding for better entry */
+}
+
+.ministry-content-wrapper {
+  width: 100%;
+  max-width: 1100px; /* Slightly wider to accommodate long titles */
+  box-sizing: border-box;
+}
+
+.pillar-header-v2 {
+  text-align: left;
+  margin-bottom: 100px;
+}
+
+.pillar-meta-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 15px;
+}
+
+.tech-code { font-family: monospace; font-size: 11px; color: #aaa; letter-spacing: 4px; }
+.ar-tag-large { font-size: 1.8rem; font-weight: 800; color: #000; }
+
+.pillar-display-title {
+  font-size: 4.2rem;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+  margin: 0;
+  line-height: 0.85;
+  color: #000;
+}
+
+.pillar-accent-line {
+  width: 80px;
+  height: 8px;
+  background: var(--tunisia-red);
+  margin-top: 30px;
+}
+
+.pillar-scroll-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 100px; /* More space between pillars for "Elite" feel */
+}
+
+.pillar-entry {
+  border-left: 1px solid #ddd;
+  padding-left: 50px;
+  transition: border-color 0.3s ease;
+}
+
+.pillar-entry:hover {
+  border-left: 1px solid var(--tunisia-red);
+}
+
+.entry-identity {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.entry-id-badge {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  font-weight: 950;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.entry-en-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.entry-name-en {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.1;
+  max-width: 700px;
+}
+
+.entry-keyword-tag {
+  font-family: monospace;
+  font-size: 10px;
+  background: #000;
+  color: #fff;
+  padding: 4px 10px;
+  font-weight: 950;
+  letter-spacing: 1px;
+}
+
+.entry-name-ar {
+  font-size: 1.7rem;
+  color: var(--tunisia-red);
+  font-weight: 700;
+  margin: 0;
+  direction: rtl;
+}
+
+.entry-body {
+  padding-left: 80px;
+}
+
+.entry-description {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #222;
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+
+.entry-status-bar {
+  display: flex;
+  gap: 25px;
+  font-family: monospace;
+  font-size: 10px;
+  color: #888;
+  font-weight: 800;
+  align-items: center;
+}
+
+.status-indicator { 
+  color: #000; 
+  font-weight: 950;
+  border-right: 1px solid #ddd;
+  padding-right: 20px;
+}
+
+.ministry-end-cap {
+  margin-top: 150px;
+  text-align: center;
+  opacity: 0.2;
+}
+
+.end-line { width: 100%; height: 1px; background: #000; margin-bottom: 25px; }
+.end-text { font-family: monospace; font-size: 10px; letter-spacing: 5px; }

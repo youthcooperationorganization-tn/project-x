@@ -1,0 +1,141 @@
+/* Footer.css - Sovereign Identity */
+
+.footer-frame {
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e5e5;
+  padding: 24px 0;
+  /* Removed Fixed position and Visibility logic */
+  position: relative; 
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left Section: Initiative & Forum */
+.branding-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.entity-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label-tiny {
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #000;
+}
+
+.tn-flag-mini {
+  width: 32px;
+  height: auto;
+  border-radius: 1px;
+}
+
+.forum-logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 20px;
+  border-left: 1px solid #eee;
+}
+
+.forum-symbol {
+  width: 22px;
+  height: 22px;
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 900;
+  border-radius: 2px;
+}
+
+.forum-text {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #000;
+}
+
+/* Center Section: Symmetrical Spine */
+.center-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.signature-block {
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: #000;
+}
+
+.made-in-tn-classic {
+  font-size: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.flag-sep {
+  height: 8px;
+  width: auto;
+}
+
+/* Right Section: Discord Action */
+.discord-nav-style-btn {
+  background-color: #5865F2;
+  color: #fff;
+  padding: 10px 24px;
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  border: 1px solid #5865F2;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.discord-nav-style-btn:hover {
+  background-color: transparent;
+  color: #5865F2;
+}
+
+.discord-icon-svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}

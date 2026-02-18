@@ -1,0 +1,102 @@
+.hemicycle-engine {
+  width: 100%;
+  height: 100vh;
+  background-color: #EDEDED;
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Telemetry HUD */
+.hemicycle-telemetry {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #DCDCDC;
+  padding-bottom: 20px;
+}
+
+.t-label {
+  display: block;
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 900;
+  color: #888;
+  letter-spacing: 0.15em;
+}
+
+.t-value {
+  font-size: 1.4rem;
+  font-weight: 950;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+/* SVG Core */
+.hemicycle-visual-core {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hemicycle-svg-element {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+}
+
+/* The Seats */
+.seat {
+  fill: #000;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.seat.efficiency {
+  fill: #A0A0A0;
+}
+
+.seat:hover, .seat.active {
+  fill: #E70013;
+  r: 10; /* Dynamic focus on hover */
+}
+
+/* Podium */
+.podium-text {
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 900;
+  fill: #666;
+}
+
+/* Legend */
+.hemicycle-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.legend-strip {
+  display: flex;
+  gap: 40px;
+  background: #FFF;
+  padding: 15px 30px;
+  border: 1px solid #DCDCDC;
+}
+
+.l-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 950;
+}
+
+.l-dot { width: 8px; height: 8px; border-radius: 50%; }
+.l-dot.black { background: #000; }
+.l-dot.gray { background: #A0A0A0; }

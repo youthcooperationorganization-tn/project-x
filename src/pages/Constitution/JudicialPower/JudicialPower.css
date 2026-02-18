@@ -1,0 +1,158 @@
+/* JudicialPower.css - Balanced Blueprint Aesthetic */
+
+.jud-section {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  padding: 5vh 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.jud-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styling */
+.jud-header {
+  margin-bottom: 4vh;
+}
+
+.jud-meta-line {
+  display: flex;
+  justify-content: space-between;
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: 900;
+  color: #888;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.jud-status {
+  color: #E70013;
+}
+
+.jud-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 950;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.jud-title .outline {
+  color: transparent;
+  -webkit-text-stroke: 1px #000;
+}
+
+/* Grid Architecture */
+.jud-main-grid {
+  display: grid;
+  grid-template-cols: 1fr 1fr;
+  gap: 2px;
+  background: #eee;
+  border: 1px solid #000;
+  margin-bottom: 4vh;
+}
+
+.jud-card {
+  background: #fff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.card-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: #E70013;
+}
+
+.card-type {
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: #888;
+}
+
+.card-body h3 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.card-body p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #444;
+  margin-bottom: 30px;
+  height: 4.5em; /* Alignment lock for symmetrical look */
+}
+
+/* Technical Specs List */
+.jud-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.spec-item {
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: 900;
+  padding: 10px;
+  background: #f9f9f9;
+  border: 1px solid #eee;
+}
+
+.spec-item span {
+  color: #E70013;
+  margin-right: 8px;
+}
+
+/* Footer Section */
+.guarantee-box {
+  border-left: 4px solid #000;
+  padding: 20px 30px;
+  background: #f4f4f4;
+}
+
+.guarantee-label {
+  display: block;
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 900;
+  color: #E70013;
+  margin-bottom: 5px;
+}
+
+.guarantee-box p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Responsive Handling */
+@media (max-width: 900px) {
+  .jud-main-grid { grid-template-cols: 1fr; }
+  .jud-card { padding: 30px; }
+  .card-body p { height: auto; }
+  .jud-section { height: auto; padding: 60px 20px; }
+}

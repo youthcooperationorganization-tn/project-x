@@ -1,0 +1,17 @@
+/* App.css */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; /* This is correct: let the Home container do the scrolling */
+}
+
+#root {
+  height: 100%;
+}
+
+.main-content-engine {
+  /* No fixed 100vh here, let it be controlled by the flex-grow in App.tsx */
+  height: calc(100vh - 80px); /* Subtracting navbar height */
+}

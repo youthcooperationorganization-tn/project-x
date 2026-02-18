@@ -1,0 +1,131 @@
+/* People.css - The Red Decentralization Section */
+
+:root {
+  --flag-red: #E70013;
+}
+
+.people-section {
+  height: 100vh; /* Controlled by parent scroll-snap */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--flag-red);
+}
+
+.people-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 4rem;
+  width: 100%;
+  z-index: 2; /* Ensures content stays above watermark */
+}
+
+.aesthetic-grid {
+  display: grid;
+  grid-template-cols: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Chip / Badge styling */
+.protocol-chip {
+  display: inline-block;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  margin-bottom: 2rem;
+}
+
+.display-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 950;
+  line-height: 0.95;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+/* Manifesto Styling */
+.manifesto-box {
+  border-left: 1px solid;
+  padding-left: 2rem;
+}
+
+.manifesto-bold {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  line-height: 1.4;
+}
+
+.manifesto-light {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  line-height: 1.8;
+}
+
+/* Node Display (Circular/Square badge) */
+.node-display {
+  width: 320px;
+  height: 320px;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.node-main-num {
+  font-size: 9rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.node-label {
+  font-family: monospace;
+  letter-spacing: 0.4em;
+  font-size: 10px;
+}
+
+/* Watermark Text */
+.bg-watermark {
+  position: absolute;
+  bottom: -2vh;
+  right: -2vw;
+  font-size: 20vh;
+  font-weight: 950;
+  color: rgba(0, 0, 0, 0.06);
+  pointer-events: none;
+  text-transform: uppercase;
+  user-select: none;
+  white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+  .aesthetic-grid {
+    grid-template-cols: 1fr;
+    gap: 3rem;
+  }
+  
+  .people-container {
+    padding: 0 2rem;
+  }
+  
+  .node-display {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .node-main-num {
+    font-size: 6rem;
+  }
+}

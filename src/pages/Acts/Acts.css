@@ -1,0 +1,147 @@
+:root {
+  --industrial-white: #EDEDED;
+  --flag-red: #E70013;
+}
+
+.acts-scroll-wrapper {
+  height: 100%; 
+  width: 100%;
+  padding: 80px 0 0 0; /* No bottom padding here to let footer sit flush */
+  overflow-y: auto; 
+  background-color: var(--industrial-white);
+  display: block; 
+}
+
+.acts-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+/* Header */
+.section-header-compact {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 950;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.header-divider { height: 1px; width: 50px; background: #000; }
+.header-meta { font-family: monospace; font-size: 10px; color: #888; }
+
+/* Categories */
+.category-block {
+  margin-bottom: 5rem;
+}
+
+.category-tag-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.group-label {
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 900;
+  color: #444;
+  letter-spacing: 0.1em;
+}
+
+.group-line { flex-grow: 1; height: 1px; background: #dcdcdc; }
+
+/* Grid Wrapper */
+.compact-horizontal-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+/* A4 Mini Report Card */
+.mini-report {
+  background: #ffffff;
+  aspect-ratio: 1 / 1.414;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dcdcdc;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.03);
+}
+
+.mini-report:hover {
+  transform: translateY(-10px) rotate(0.5deg);
+  border-color: var(--flag-red);
+  box-shadow: 12px 12px 0px rgba(0,0,0,0.06);
+}
+
+.mini-report-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.mini-id { font-family: monospace; font-size: 9px; font-weight: 800; color: #bbb; }
+.mini-seal { width: 14px; height: 14px; border: 1px solid #eee; border-radius: 50%; }
+.mini-report:hover .mini-seal { background: var(--flag-red); border-color: var(--flag-red); }
+
+.mini-title {
+  font-size: 1.15rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: #111;
+  margin-bottom: 1.2rem;
+}
+
+.mini-lines { display: flex; flex-direction: column; gap: 8px; opacity: 0.4; }
+.line-long, .line-short { height: 2px; background: #e0e0e0; border-radius: 1px; }
+.line-long { width: 100%; }
+.line-short { width: 60%; }
+
+.mini-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+  font-family: monospace;
+  font-size: 8px;
+  font-weight: 900;
+  color: #bbb;
+}
+
+.mini-report:hover .view-link { color: var(--flag-red); }
+
+/* Footer Styling */
+.compact-footer {
+  padding: 120px 4rem 40px;
+  margin-top: 40px;
+}
+
+.footer-line { height: 1px; width: 100%; background: #000; margin-bottom: 25px; }
+.footer-meta-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: monospace;
+  font-size: 10px;
+  color: #666;
+  font-weight: 900;
+}
+
+@media (max-width: 768px) {
+  .acts-container { padding: 0 2rem; }
+  .compact-horizontal-wrap { grid-template-columns: 1fr; }
+  .compact-footer { padding: 60px 2rem 40px; }
+}

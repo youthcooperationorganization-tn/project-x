@@ -1,0 +1,200 @@
+/* SplitSection.css - 1+24 Blackout Aesthetic */
+
+.split-section {
+  min-height: 120vh; /* Elongated to feel massive and institutional */
+  width: 100%;
+  background-color: #000;
+  padding: 120px 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.split-container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.split-header-block {
+  margin-bottom: 80px;
+  text-align: left;
+}
+
+.protocol-tab {
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: 900;
+  color: #E70013;
+  border: 1px solid #E70013;
+  padding: 5px 12px;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.split-main-title {
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 950;
+  color: #fff;
+  line-height: 0.85;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.split-main-title .outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #fff;
+}
+
+.split-description {
+  font-size: 1.2rem;
+  color: #888;
+  max-width: 650px;
+  line-height: 1.6;
+  border-left: 2px solid #E70013;
+  padding-left: 25px;
+}
+
+/* Grid Structure */
+.split-grid-structure {
+  display: grid;
+  grid-template-cols: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.split-region-box {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #222;
+}
+
+/* Federal Side - Higher Visual Weight */
+.federal-core {
+  background: #fff;
+  color: #000;
+  border: none;
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.05);
+}
+
+.regional-satellites {
+  background: #0a0a0a;
+  color: #fff;
+}
+
+.region-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+  padding-bottom: 20px;
+}
+
+.region-index {
+  font-size: 3rem;
+  font-weight: 950;
+  letter-spacing: -0.05em;
+}
+
+.region-type {
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  opacity: 0.6;
+}
+
+.region-body h3 {
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.region-body p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  opacity: 0.8;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-cols: 1fr; /* Stacked for clarity in this version */
+  gap: 12px;
+}
+
+.feature-cell {
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: 900;
+  padding: 15px;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.feature-cell span {
+  color: #E70013;
+  margin-right: 10px;
+}
+
+/* CTA */
+.split-action-area {
+  margin-bottom: 80px;
+}
+
+.constitution-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #E70013;
+  color: #fff;
+  text-decoration: none;
+  padding: 30px 50px;
+  transition: all 0.5s ease;
+}
+
+.constitution-btn:hover {
+  background: #fff;
+  color: #000;
+  transform: scale(1.02);
+}
+
+.btn-text {
+  font-size: 1.4rem;
+  font-weight: 950;
+}
+
+/* Footer Details */
+.split-footer-line {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #222;
+  padding-top: 30px;
+  font-family: monospace;
+  font-size: 10px;
+  color: #444;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pulse {
+  width: 8px;
+  height: 8px;
+  background: #E70013;
+  border-radius: 50%;
+  animation: flash 2s infinite;
+}
+
+@keyframes flash { 50% { opacity: 0.2; } }
+
+@media (max-width: 1024px) {
+  .split-grid-structure { grid-template-cols: 1fr; }
+  .split-section { padding: 80px 20px; }
+}

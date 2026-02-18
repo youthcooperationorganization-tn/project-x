@@ -1,0 +1,60 @@
+.commissions-wrapper-white {
+  height: 100%;
+  width: 100%;
+  background-color: var(--industrial-white);
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+}
+
+.commis-high-fidelity-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 100px;
+  width: 100%;
+  max-width: 1400px;
+  align-items: center;
+}
+
+/* LEFT SIDE: TYPOGRAPHY */
+.commis-info-header { margin-bottom: 40px; }
+.tag-group { display: flex; gap: 10px; margin-bottom: 25px; }
+
+.id-badge { font-family: monospace; font-size: 10px; background: #000; color: #fff; padding: 5px 10px; font-weight: 900; }
+.status-badge { font-family: monospace; font-size: 10px; border: 1.5px solid #000; color: #000; padding: 4px 10px; font-weight: 900; }
+
+.commis-display-title { font-size: 3.2rem; font-weight: 950; text-transform: uppercase; line-height: 0.9; margin: 15px 0; color: #000; }
+.commis-display-ar { font-size: 1.8rem; color: var(--tunisia-red); font-weight: 500; }
+
+.commis-mandate-box { border-top: 2px solid #000; padding-top: 30px; margin-top: 20px; }
+.mandate-header { font-family: monospace; font-size: 12px; font-weight: 950; color: #000; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 1px; }
+.mandate-body { font-size: 1.15rem; color: #1a1a1a; line-height: 1.7; margin-bottom: 45px; font-weight: 400; }
+
+.stat-row { display: flex; gap: 50px; }
+.stat-val { display: block; font-size: 2.2rem; font-weight: 950; color: #000; }
+.stat-label { font-family: monospace; font-size: 11px; color: #333; font-weight: 700; letter-spacing: 1px; }
+
+/* RIGHT SIDE: VISUAL */
+.svg-elevation-card {
+  background: #fff;
+  border: 1px solid #111;
+  padding: 50px;
+  box-shadow: 40px 40px 0px rgba(0,0,0,0.02); /* Crisp architectural shadow */
+  position: relative;
+}
+
+.council-depth-svg {
+  width: 100%;
+  height: auto;
+}
+
+.card-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  font-family: monospace;
+  font-size: 9px;
+  color: #111;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
