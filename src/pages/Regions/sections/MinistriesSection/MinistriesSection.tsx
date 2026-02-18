@@ -39,7 +39,7 @@ const MinistriesSection: React.FC<MinistriesProps> = ({ activeRegion }) => {
         </header>
 
         <div className="pillar-scroll-stack">
-          {departments.map((dept, i) => (
+          {departments.map((dept) => (
             <motion.div 
               key={dept.id} 
               className="pillar-entry"
