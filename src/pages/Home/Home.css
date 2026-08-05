@@ -11,25 +11,28 @@
   width: 100%;
   overflow-y: auto;
   scroll-snap-type: y mandatory;
+  scroll-padding-bottom: 1rem;
   scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
 }
 
 .snap-section {
-  min-height: 100%; /* Ensure it takes full view height */
+  min-height: 100%;
   flex-shrink: 0;
   width: 100%;
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
 
-/* THE FIX: Footer alignment */
-.footer-snap-wrapper {
+/* Footer alignment and snap */
+.footer-snap-point {
   width: 100%;
   flex-shrink: 0;
-  scroll-snap-align: end; /* Snaps the bottom of the footer to the bottom of the screen */
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
   background: #fff;
+  padding-bottom: env(safe-area-inset-bottom, 0);
 }
 
 /* Hide scrollbar but keep functionality */
@@ -39,4 +42,14 @@
 .home-scroll-container {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+@media (max-width: 768px) {
+  .home-scroll-container {
+    scroll-snap-type: y proximity;
+  }
+
+  .snap-section {
+    min-height: auto;
+  }
 }

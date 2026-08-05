@@ -41,7 +41,7 @@
 /* Symmetrical Grid */
 .leg-grid {
   display: grid;
-  grid-template-cols: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1px; /* Minimalist divider effect */
   background: #eee;
   border: 1px solid #000;
@@ -132,7 +132,25 @@
 }
 
 @media (max-width: 900px) {
-  .leg-grid { grid-template-cols: 1fr; }
+  .leg-grid { grid-template-columns: 1fr; }
   .leg-card { min-height: auto; padding: 30px; }
   .leg-data-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .legislative-section {
+    padding: 60px 1rem;
+  }
+
+  .leg-card {
+    padding: 1rem;
+  }
+
+  .leg-card-body h3 {
+    font-size: 1.3rem;
+  }
+
+  .leg-handover-box {
+    padding: 1rem;
+  }
 }

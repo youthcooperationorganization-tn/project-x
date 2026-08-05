@@ -10,7 +10,7 @@
 
 .regions-page {
   background-color: var(--bg-black);
-  height: 100vh;
+  height: 100%;
   width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
@@ -26,7 +26,7 @@
 }
 
 .snap-section {
-  height: 100vh;
+  min-height: 100%;
   width: 100%;
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -80,4 +80,15 @@
 @keyframes bounce {
   0%, 100% { transform: translateY(0); opacity: 1; }
   50% { transform: translateY(10px); opacity: 0.3; }
+}
+
+@media (max-width: 768px) {
+  .scroll-indicator {
+    bottom: 12px;
+  }
+
+  .scroll-indicator .tech-font {
+    letter-spacing: 2px;
+    font-size: 0.56rem;
+  }
 }

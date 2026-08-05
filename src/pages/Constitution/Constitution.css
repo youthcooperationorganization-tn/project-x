@@ -6,7 +6,7 @@
 }
 
 .const-scroll-container {
-  height: 100vh;
+  height: 100%;
   width: 100%; /* Changed from 100vw to 100% to avoid scrollbar math issues */
   overflow-y: auto;
   overflow-x: hidden;
@@ -17,7 +17,7 @@
 }
 
 .const-snap-section {
-  min-height: 100vh;
+  min-height: 100%;
   width: 100%;
   flex-shrink: 0;
   scroll-snap-align: start;

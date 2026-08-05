@@ -7,6 +7,7 @@ import './App.css';
 import Acts from './pages/Acts/Acts';
 import Boards from './pages/Boards/Boards';
 import Regions from './pages/Regions/Regions';
+import { LanguageProvider } from './store/LanguageProvider';
 
 /**
  * Project X: Central App Engine
@@ -15,9 +16,10 @@ import Regions from './pages/Regions/Regions';
 
 const App: React.FC = () => {
   return (
+    <LanguageProvider>
     <HashRouter>
       {/* Viewport locked to screen height to prevent body-level scrolling issues */}
-      <div className="h-screen flex flex-col bg-white overflow-hidden">
+      <div className="app-shell">
         
         <NavigationBar />
         
@@ -25,7 +27,7 @@ const App: React.FC = () => {
           Overflow-hidden here ensures that the scrollbar is handled 
           by the specific Page component for a cleaner 'App-like' feel.
         */}
-        <main className="main-content-engine relative flex-grow overflow-hidden">
+        <main className="main-content-engine">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/constitution" element={<Constitution />} />
@@ -37,6 +39,7 @@ const App: React.FC = () => {
 
       </div>
     </HashRouter>
+    </LanguageProvider>
   );
 };
 

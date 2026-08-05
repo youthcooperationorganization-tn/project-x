@@ -6,7 +6,8 @@
 }
 
 .pillars-section {
-  height: 100vh; /* Controlled by parent scroll-snap */
+  min-height: 100%;
+  min-height: 100dvh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -37,7 +38,7 @@
   font-weight: 950;
   color: #000;
   text-transform: uppercase;
-  tracking-widest: 0.2em;
+  letter-spacing: 0.2em;
 }
 
 .header-divider {
@@ -163,5 +164,30 @@
   .mini-report {
     min-width: 40%;
     max-width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .pillars-section {
+    justify-content: flex-start;
+    padding: 1.5rem 0;
+  }
+
+  .pillars-container {
+    padding: 0 1rem;
+    margin-top: 0;
+  }
+
+  .section-header-compact {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .mini-report {
+    min-width: 100%;
+    max-width: 100%;
+    aspect-ratio: auto;
+    min-height: 260px;
   }
 }

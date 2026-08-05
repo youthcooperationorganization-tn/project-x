@@ -141,7 +141,15 @@
 }
 
 @media (max-width: 768px) {
-  .acts-container { padding: 0 2rem; }
+  .acts-container { padding: 0 1rem; }
   .compact-horizontal-wrap { grid-template-columns: 1fr; }
-  .compact-footer { padding: 60px 2rem 40px; }
+  .compact-footer { padding: 60px 1rem 40px; }
+  .section-header-compact {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+  }
+  .mini-report:hover {
+    transform: none;
+  }
 }

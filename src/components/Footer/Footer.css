@@ -139,3 +139,54 @@
   height: 16px;
   fill: currentColor;
 }
+
+@media (max-width: 1023px) {
+  .footer-frame {
+    padding: 20px 0;
+  }
+
+  .footer-container {
+    padding: 0 1rem;
+  }
+
+  .footer-content {
+    position: static;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .branding-left {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .forum-logo-wrap {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .center-stack {
+    position: static;
+    transform: none;
+    align-items: flex-start;
+  }
+
+  .signature-block,
+  .made-in-tn-classic {
+    letter-spacing: 0.12em;
+  }
+
+  .actions-group,
+  .discord-nav-style-btn {
+    width: 100%;
+  }
+
+  .discord-nav-style-btn {
+    justify-content: center;
+    padding: 10px 14px;
+    letter-spacing: 0.08em;
+  }
+}

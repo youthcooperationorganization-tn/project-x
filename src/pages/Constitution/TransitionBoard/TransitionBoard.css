@@ -51,7 +51,7 @@
 /* The Grid */
 .trans-content-grid {
   display: grid;
-  grid-template-cols: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 80px;
   margin-bottom: 60px;
 }
@@ -160,6 +160,25 @@
 }
 
 @media (max-width: 1024px) {
-  .trans-content-grid { grid-template-cols: 1fr; }
+  .trans-content-grid { grid-template-columns: 1fr; }
   .trans-section { padding: 80px 2rem; }
+}
+
+@media (max-width: 768px) {
+  .trans-section {
+    padding: 60px 1rem;
+  }
+
+  .trans-mission-statement {
+    font-size: 1rem;
+    padding-left: 1rem;
+  }
+
+  .flow-item {
+    gap: 0.75rem;
+  }
+
+  .large-crit-card {
+    padding: 1rem;
+  }
 }

@@ -48,3 +48,21 @@ button {
   cursor: pointer;
   transition: all 0.2s ease;
 }
+
+[dir='rtl'] .manifesto-box,
+[dir='rtl'] .entry-body,
+[dir='rtl'] .pillar-entry {
+  border-left: none;
+  border-right: 1px solid;
+  padding-left: 0;
+  padding-right: 2rem;
+}
+
+[dir='rtl'] .split-description,
+[dir='rtl'] .trans-mission-statement,
+[dir='rtl'] .guarantee-box {
+  border-left: none;
+  border-right: 2px solid #E70013;
+  padding-left: 0;
+  padding-right: 25px;
+}

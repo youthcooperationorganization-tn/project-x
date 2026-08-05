@@ -55,7 +55,7 @@
 /* Grid Architecture */
 .jud-main-grid {
   display: grid;
-  grid-template-cols: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 2px;
   background: #eee;
   border: 1px solid #000;
@@ -151,7 +151,7 @@
 
 /* Responsive Handling */
 @media (max-width: 900px) {
-  .jud-main-grid { grid-template-cols: 1fr; }
+  .jud-main-grid { grid-template-columns: 1fr; }
   .jud-card { padding: 30px; }
   .card-body p { height: auto; }
   .jud-section { height: auto; padding: 60px 20px; }

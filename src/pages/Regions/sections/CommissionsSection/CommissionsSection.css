@@ -58,3 +58,39 @@
   font-weight: 900;
   letter-spacing: 2px;
 }
+
+@media (max-width: 1024px) {
+  .commissions-wrapper-white {
+    height: auto;
+    min-height: 100%;
+    padding: 32px 1rem;
+  }
+
+  .commis-high-fidelity-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .commis-display-title {
+    font-size: 2rem;
+  }
+
+  .mandate-body {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .stat-row {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .svg-elevation-card {
+    padding: 1rem;
+    box-shadow: none;
+  }
+
+  .card-caption {
+    left: 1rem;
+  }
+}

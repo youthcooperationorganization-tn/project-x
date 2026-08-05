@@ -105,3 +105,36 @@
   from { opacity: 0.4; }
   to { opacity: 1; }
 }
+
+@media (max-width: 1024px) {
+  .governance-container {
+    height: auto;
+    min-height: 100%;
+    padding: 36px 0;
+  }
+
+  .governance-inner {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .governance-header {
+    margin-bottom: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .display-title {
+    font-size: 1.9rem;
+  }
+
+  .gov-grid {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .gov-card {
+    padding: 1rem;
+  }
+}

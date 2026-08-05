@@ -157,6 +157,17 @@
 }
 
 @media (max-width: 768px) {
-  .boards-container { padding: 0 2rem; }
+  .boards-container { padding: 0 1rem; }
   .boards-grid { grid-template-columns: 1fr; }
+  .section-header-compact {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+  }
+  .mini-report {
+    padding: 35px 16px 16px;
+  }
+  .compact-footer {
+    padding: 60px 1rem 40px;
+  }
 }
